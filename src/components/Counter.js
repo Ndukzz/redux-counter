@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { counterActions } from "../store/toolkitIndex"
 
 const Counter = () => {
-  const counter = useSelector(state => state.counter);   //  pulling a slice of state from the store
-  const toggleCounter = useSelector(state => state.toggleCounter)
+  const counter = useSelector(state => state.counter.counter);   //  pulling a slice of state from the store
+  const toggleCounter = useSelector(state => state.counter.toggleCounter)
   const dispatch = useDispatch();
   console.log(counter );
 
