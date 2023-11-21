@@ -5,7 +5,7 @@ import { Provider } from "react-redux"; //THE PROVIDER
 
 import "./index.css";
 import App from "./App";
-import store from "./store/index.js"; // THE REDUX STORE
+import store from "./store/toolkitIndex.js"; // THE REDUX STORE
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
