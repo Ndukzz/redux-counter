@@ -1,7 +1,7 @@
 import classes from './Auth.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { authActions } from '../store/toolkitIndex';
+import { authActions } from '../store/authSlice';
 import { useState } from 'react';
 
 const Auth = () => {
@@ -33,7 +33,7 @@ const Auth = () => {
   return (
     <main className={classes.auth}>
       <section>
-        <form>
+        <form onSubmit={loginHandler}>
           <div className={classes.control}>
             <label htmlFor='email'>Email</label>
             <input type='email' id='email' value={params.email} onChange={emailHandler} />
@@ -42,7 +42,7 @@ const Auth = () => {
             <label htmlFor='password'>Password</label>
             <input type='password' id='password' value={params.password} onChange={passwordHandler} />
           </div>
-          <button disabled={ !params.email.includes("@") || params.password.length <= 5 } onClick={loginHandler}>Login</button>
+          <button disabled={ !params.email.includes("@") || params.password.length <= 5 }>Login</button>
         </form>
       </section>
     </main>
